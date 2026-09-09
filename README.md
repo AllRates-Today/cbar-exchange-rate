@@ -70,7 +70,7 @@ const pair = await getRate('USD', 'AZN', { apiKey: 'art_live_...' });
 {
   bank: 'cbar',
   name: 'Central Bank of Azerbaijan',
-  rate_date: '2026-08-11',   // Central Bank of Azerbaijan's own publication date
+  rate_date: '2026-09-09',   // Central Bank of Azerbaijan's own publication date
   source: 'USD',
   target: 'AZN',
   rate: 1.7,
@@ -98,7 +98,7 @@ console.log(table.rate_date, table.rates.length);
 {
   bank: 'cbar',
   name: 'Central Bank of Azerbaijan',
-  rate_date: '2026-08-11',
+  rate_date: '2026-09-09',
   rates: [
     { "base": "USD", "quote": "AZN", "type": "reference", "value": 1.7 },
     // … the rest of the published table (38 currencies vs AZN)
@@ -140,7 +140,7 @@ Paid plans. One resolved rate per publication date — ready for charting, reval
 import { getHistory } from 'cbar-exchange-rate';
 
 const series = await getHistory(
-  { source: 'USD', target: 'AZN', from: '2026-01-01', to: '2026-08-11' },
+  { source: 'USD', target: 'AZN', from: '2026-01-01', to: '2026-09-09' },
   { apiKey: 'art_live_...' }
 );
 ```
@@ -153,11 +153,11 @@ const series = await getHistory(
   source: 'USD',
   target: 'AZN',
   from: '2026-01-01',
-  to: '2026-08-11',
+  to: '2026-09-09',
   count: 152,
   rates: [
     // one entry per publication date
-    { date: '2026-08-11', rate: 1.7, rate_type: 'reference', derived: false, method: 'published' },
+    { date: '2026-09-09', rate: 1.7, rate_type: 'reference', derived: false, method: 'published' },
     // …
   ],
   disclaimer: '…'
@@ -170,9 +170,9 @@ Pass `{ symbol: 'USD' }` instead of `source`/`target` to get the raw published r
 
 ## 🗺️ Currencies covered
 
-Central Bank of Azerbaijan currently publishes rates covering **39 currencies** (as of the latest table):
+Central Bank of Azerbaijan currently publishes rates covering **38 currencies** against the AZN (as of the latest table):
 
-`AED` · `AUD` · `AZN` · `BYN` · `CAD` · `CHF` · `CNY` · `CZK` · `DKK` · `EUR` · `GBP` · `GEL` · `HKD` · `HUF` · `ILS` · `INR` · `JPY` · `KGS` · `KRW` · `KWD` · `KZT` · `MDL` · `NOK` · `NZD` · `PKR` · `PLN` · `QAR` · `RON` · `RSD` · `RUB` · `SAR` · `SDR` · `SEK` · `SGD` · `TMT` · `TRY` · `UAH` · `USD` · `UZS`
+🇦🇪 `AED` · 🇦🇺 `AUD` · 🇧🇾 `BYN` · 🇨🇦 `CAD` · 🇨🇭 `CHF` · 🇨🇳 `CNY` · 🇨🇿 `CZK` · 🇩🇰 `DKK` · 🇪🇺 `EUR` · 🇬🇧 `GBP` · 🇬🇪 `GEL` · 🇭🇰 `HKD` · 🇭🇺 `HUF` · 🇮🇱 `ILS` · 🇮🇳 `INR` · 🇯🇵 `JPY` · 🇰🇬 `KGS` · 🇰🇷 `KRW` · 🇰🇼 `KWD` · 🇰🇿 `KZT` · 🇲🇩 `MDL` · 🇳🇴 `NOK` · 🇳🇿 `NZD` · 🇵🇰 `PKR` · 🇵🇱 `PLN` · 🇶🇦 `QAR` · 🇷🇴 `RON` · 🇷🇸 `RSD` · 🇷🇺 `RUB` · 🇸🇦 `SAR` · `SDR` · 🇸🇪 `SEK` · 🇸🇬 `SGD` · 🇹🇲 `TMT` · 🇹🇷 `TRY` · 🇺🇦 `UAH` · 🇺🇸 `USD` · 🇺🇿 `UZS`
 
 ## ⚖️ Published vs derived rates
 
@@ -235,6 +235,14 @@ getRate('USD', 'AZN', { apiKey: 'art_live_...' }).then((pair) => console.log(pai
 | `getLatestRates({ apiKey })` | Free | The central bank's full latest published table |
 | `getRatesForDate(date, { apiKey, source?, target? })` | Paid | The official table (or one pair) for a YYYY-MM-DD date |
 | `getHistory({ symbol \| source+target, from?, to? }, { apiKey })` | Paid | Daily series since 2016 |
+
+## 📥 Bulk data (no key)
+
+Need the whole archive rather than an API call? The same published tables are mirrored daily as open data:
+
+- Hugging Face: [AllRates/central-bank-exchange-rates](https://huggingface.co/datasets/AllRates/central-bank-exchange-rates) — one CSV per institution (`rates/cbar.csv`)
+- Kaggle: [allratestoday/central-bank-exchange-rates](https://www.kaggle.com/datasets/allratestoday/central-bank-exchange-rates)
+- CDN JSON: `https://cdn.jsdelivr.net/gh/AllRates-Today/central-bank-exchange-rates@main/data/cbar/latest.json`
 
 ## 🔗 Links
 

@@ -4,6 +4,8 @@
 [![license](https://img.shields.io/npm/l/cbar-exchange-rate.svg)](https://github.com/AllRates-Today/cbar-exchange-rate/blob/main/LICENSE)
 [![zero dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](https://www.npmjs.com/package/cbar-exchange-rate)
 [![TypeScript](https://img.shields.io/badge/TypeScript-types%20included-3178C6.svg)](https://www.typescriptlang.org/)
+[![USD/AZN today](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fallratestoday.com%2Fapi%2Fopen%2Fcentral-bank%2Fcbar%3Fsource%3DUSD%26target%3DAZN&query=%24.rate&label=USD%2FAZN%20published%20by%20Central%20Bank%20of%20Azerbaijan&color=0A7E8C&cacheSeconds=3600)](https://allratestoday.com/central-bank-rates-api/cbar/)
+[![rate date](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fallratestoday.com%2Fapi%2Fopen%2Fcentral-bank%2Fcbar%3Fsource%3DUSD%26target%3DAZN&query=%24.rate_date&label=rate%20date&color=555&cacheSeconds=3600)](https://allratestoday.com/central-bank-rates-api/cbar/)
 
 **Official Central Bank of Azerbaijan (Azerbaijan) daily exchange rates for Node.js and TypeScript. The published central bank rates behind tax filings, customs valuations, audits, and compliant invoicing — not market estimates, but the numbers Central Bank of Azerbaijan itself prints, every business day.**
 
@@ -32,6 +34,57 @@ console.log(r.rate_date, r.rates.length); // the central bank's latest published
 ```
 
 The open endpoint serves the *latest* table only and asks for a visible attribution link. The client below uses the keyed API, which adds point-in-time tables, history, and CSV/XML/Excel output.
+
+## 📈 Latest published table
+
+Today's full Central Bank of Azerbaijan table, straight from the central bank's latest publication. On GitHub it is refreshed by [a daily Action](.github/workflows/daily-table.yml) that reads the keyless endpoint above and commits only when the central bank publishes a new table; the copy on npm is as of the package's publish date.
+
+<!-- daily-table:start -->
+Published **2026-10-08** by Central Bank of Azerbaijan — 38 rates. Updated 2026-10-08.
+
+| Base | Quote | Type | Rate |
+| --- | --- | --- | ---: |
+| AED | AZN | reference | 0.4628 |
+| AUD | AZN | reference | 1.1824 |
+| BYN | AZN | reference | 0.5638 |
+| CAD | AZN | reference | 1.1919 |
+| CHF | AZN | reference | 2.0409 |
+| CNY | AZN | reference | 0.2536 |
+| CZK | AZN | reference | 0.078 |
+| DKK | AZN | reference | 0.2548 |
+| EUR | AZN | reference | 1.9048 |
+| GBP | AZN | reference | 2.2455 |
+| GEL | AZN | reference | 0.6547 |
+| HKD | AZN | reference | 0.2166 |
+| HUF | AZN | reference | 0.005205 |
+| ILS | AZN | reference | 0.5546 |
+| INR | AZN | reference | 0.0176 |
+| JPY | AZN | reference | 0.010743 |
+| KGS | AZN | reference | 0.0194 |
+| KRW | AZN | reference | 0.00127 |
+| KWD | AZN | reference | 5.4759 |
+| KZT | AZN | reference | 0.0038 |
+| MDL | AZN | reference | 0.0954 |
+| NOK | AZN | reference | 0.1776 |
+| NZD | AZN | reference | 0.9526 |
+| PKR | AZN | reference | 0.006114 |
+| PLN | AZN | reference | 0.4351 |
+| QAR | AZN | reference | 0.4664 |
+| RON | AZN | reference | 0.3558 |
+| RSD | AZN | reference | 0.0162 |
+| RUB | AZN | reference | 0.019883 |
+| SAR | AZN | reference | 0.4528 |
+| SDR | AZN | reference | 2.2987 |
+| SEK | AZN | reference | 0.1701 |
+| SGD | AZN | reference | 1.3278 |
+| TMT | AZN | reference | 0.4857 |
+| TRY | AZN | reference | 0.0345 |
+| UAH | AZN | reference | 0.0379 |
+| USD | AZN | reference | 1.7 |
+| UZS | AZN | reference | 0.000144 |
+
+Source: [Official rates published by CBAR, served by AllRatesToday](https://allratestoday.com/central-bank-rates-api/cbar/). Rates are as printed by the central bank; AllRatesToday is not affiliated with it.
+<!-- daily-table:end -->
 
 ## 🔑 Get your API key
 

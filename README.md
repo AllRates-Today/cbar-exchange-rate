@@ -40,46 +40,46 @@ The open endpoint serves the *latest* table only and asks for a visible attribut
 Today's full Central Bank of Azerbaijan table, straight from the central bank's latest publication. On GitHub it is refreshed by [a daily Action](.github/workflows/daily-table.yml) that reads the keyless endpoint above and commits only when the central bank publishes a new table; the copy on npm is as of the package's publish date.
 
 <!-- daily-table:start -->
-Published **2026-10-08** by Central Bank of Azerbaijan — 38 rates. Updated 2026-10-08.
+Published **2026-10-09** by Central Bank of Azerbaijan — 38 rates. Updated 2026-10-09.
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
 | AED | AZN | reference | 0.4628 |
-| AUD | AZN | reference | 1.1824 |
+| AUD | AZN | reference | 1.1865 |
 | BYN | AZN | reference | 0.5638 |
-| CAD | AZN | reference | 1.1919 |
-| CHF | AZN | reference | 2.0409 |
-| CNY | AZN | reference | 0.2536 |
-| CZK | AZN | reference | 0.078 |
-| DKK | AZN | reference | 0.2548 |
-| EUR | AZN | reference | 1.9048 |
-| GBP | AZN | reference | 2.2455 |
-| GEL | AZN | reference | 0.6547 |
+| CAD | AZN | reference | 1.1962 |
+| CHF | AZN | reference | 2.0475 |
+| CNY | AZN | reference | 0.2538 |
+| CZK | AZN | reference | 0.0783 |
+| DKK | AZN | reference | 0.2554 |
+| EUR | AZN | reference | 1.9093 |
+| GBP | AZN | reference | 2.2516 |
+| GEL | AZN | reference | 0.6543 |
 | HKD | AZN | reference | 0.2166 |
-| HUF | AZN | reference | 0.005205 |
-| ILS | AZN | reference | 0.5546 |
+| HUF | AZN | reference | 0.005226 |
+| ILS | AZN | reference | 0.5567 |
 | INR | AZN | reference | 0.0176 |
-| JPY | AZN | reference | 0.010743 |
+| JPY | AZN | reference | 0.010754 |
 | KGS | AZN | reference | 0.0194 |
-| KRW | AZN | reference | 0.00127 |
-| KWD | AZN | reference | 5.4759 |
-| KZT | AZN | reference | 0.0038 |
-| MDL | AZN | reference | 0.0954 |
-| NOK | AZN | reference | 0.1776 |
-| NZD | AZN | reference | 0.9526 |
-| PKR | AZN | reference | 0.006114 |
-| PLN | AZN | reference | 0.4351 |
+| KRW | AZN | reference | 0.001268 |
+| KWD | AZN | reference | 5.4679 |
+| KZT | AZN | reference | 0.003774 |
+| MDL | AZN | reference | 0.0951 |
+| NOK | AZN | reference | 0.178 |
+| NZD | AZN | reference | 0.9557 |
+| PKR | AZN | reference | 0.006116 |
+| PLN | AZN | reference | 0.4361 |
 | QAR | AZN | reference | 0.4664 |
-| RON | AZN | reference | 0.3558 |
-| RSD | AZN | reference | 0.0162 |
-| RUB | AZN | reference | 0.019883 |
+| RON | AZN | reference | 0.3572 |
+| RSD | AZN | reference | 0.0163 |
+| RUB | AZN | reference | 0.019998 |
 | SAR | AZN | reference | 0.4528 |
-| SDR | AZN | reference | 2.2987 |
-| SEK | AZN | reference | 0.1701 |
-| SGD | AZN | reference | 1.3278 |
+| SDR | AZN | reference | 2.2981 |
+| SEK | AZN | reference | 0.1708 |
+| SGD | AZN | reference | 1.3289 |
 | TMT | AZN | reference | 0.4857 |
 | TRY | AZN | reference | 0.0345 |
-| UAH | AZN | reference | 0.0379 |
+| UAH | AZN | reference | 0.0378 |
 | USD | AZN | reference | 1.7 |
 | UZS | AZN | reference | 0.000144 |
 

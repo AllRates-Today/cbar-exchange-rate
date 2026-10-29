@@ -47,46 +47,46 @@ The image is rendered live from the keyless endpoint above, so it follows the ce
 
 <!-- daily-table:start -->
 <details>
-<summary>Table as text: published 2026-10-28 by Central Bank of Azerbaijan — 38 rates. Updated 2026-10-28.</summary>
+<summary>Table as text: published 2026-10-29 by Central Bank of Azerbaijan — 38 rates. Updated 2026-10-29.</summary>
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
 | AED | AZN | reference | 0.4628 |
-| AUD | AZN | reference | 1.1956 |
+| AUD | AZN | reference | 1.1988 |
 | BYN | AZN | reference | 0.553 |
-| CAD | AZN | reference | 1.2087 |
-| CHF | AZN | reference | 2.0483 |
-| CNY | AZN | reference | 0.2549 |
-| CZK | AZN | reference | 0.0777 |
-| DKK | AZN | reference | 0.2529 |
-| EUR | AZN | reference | 1.8907 |
-| GBP | AZN | reference | 2.2601 |
-| GEL | AZN | reference | 0.6551 |
+| CAD | AZN | reference | 1.2156 |
+| CHF | AZN | reference | 2.0518 |
+| CNY | AZN | reference | 0.2552 |
+| CZK | AZN | reference | 0.0778 |
+| DKK | AZN | reference | 0.2535 |
+| EUR | AZN | reference | 1.8945 |
+| GBP | AZN | reference | 2.2645 |
+| GEL | AZN | reference | 0.6554 |
 | HKD | AZN | reference | 0.2167 |
-| HUF | AZN | reference | 0.005153 |
-| ILS | AZN | reference | 0.5563 |
-| INR | AZN | reference | 0.0179 |
-| JPY | AZN | reference | 0.010769 |
+| HUF | AZN | reference | 0.005162 |
+| ILS | AZN | reference | 0.5452 |
+| INR | AZN | reference | 0.0178 |
+| JPY | AZN | reference | 0.010772 |
 | KGS | AZN | reference | 0.0194 |
-| KRW | AZN | reference | 0.001267 |
-| KWD | AZN | reference | 5.4625 |
-| KZT | AZN | reference | 0.003723 |
-| MDL | AZN | reference | 0.0948 |
-| NOK | AZN | reference | 0.1822 |
-| NZD | AZN | reference | 0.9533 |
-| PKR | AZN | reference | 0.006138 |
-| PLN | AZN | reference | 0.4296 |
+| KRW | AZN | reference | 0.001272 |
+| KWD | AZN | reference | 5.465 |
+| KZT | AZN | reference | 0.003733 |
+| MDL | AZN | reference | 0.0945 |
+| NOK | AZN | reference | 0.1837 |
+| NZD | AZN | reference | 0.9554 |
+| PKR | AZN | reference | 0.006121 |
+| PLN | AZN | reference | 0.4305 |
 | QAR | AZN | reference | 0.4663 |
-| RON | AZN | reference | 0.3534 |
+| RON | AZN | reference | 0.3541 |
 | RSD | AZN | reference | 0.0161 |
 | RUB | AZN | reference | 0.021118 |
-| SAR | AZN | reference | 0.4529 |
-| SDR | AZN | reference | 2.2995 |
-| SEK | AZN | reference | 0.1708 |
-| SGD | AZN | reference | 1.3262 |
+| SAR | AZN | reference | 0.453 |
+| SDR | AZN | reference | 2.298 |
+| SEK | AZN | reference | 0.1715 |
+| SGD | AZN | reference | 1.3277 |
 | TMT | AZN | reference | 0.4857 |
 | TRY | AZN | reference | 0.0341 |
-| UAH | AZN | reference | 0.0372 |
+| UAH | AZN | reference | 0.0373 |
 | USD | AZN | reference | 1.7 |
 | UZS | AZN | reference | 0.000142 |
 
@@ -253,6 +253,7 @@ The Central Bank of Azerbaijan sets the official manat exchange rate for around 
 
 - Publisher's own page: [Official exchange rates](https://www.cbar.az/currency/rates) · [www.cbar.az](https://www.cbar.az)
 - Publication: every business day; the exact schedule, freshness status and any current delay are on the [Central Bank of Azerbaijan rates page](https://allratestoday.com/central-bank-rates-api/cbar/)
+- In the API: usually by **21:15 UTC** (measured over the last 6 publications). Schedule a sync at or after that time and retry hourly until `rate_date` moves; every response carries the same figure as `available_by_utc` — see [when to poll](https://allratestoday.com/docs/#when-to-poll)
 - Values are stored unmodified, with the publisher's own `rate_date` on every row — see the [methodology](https://allratestoday.com/official-rates-methodology/)
 
 ## 🧭 Reading the numbers
